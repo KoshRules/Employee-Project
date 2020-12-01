@@ -2,7 +2,7 @@
  *  Employee Class
  */
 
-public class Employee
+public abstract class Employee
 {
     private String firstName;
     private String secondName;
@@ -67,12 +67,6 @@ public class Employee
     /** promise any concrete subclass of Employee will implement this method
      * @return will calculate the total salary uncluding bonuses
      */
-    //abstract public double calculateSalary()
-    {
-        public ???(???)
-        {
-            this.?? = ??;
-            this.?? = ??;
-        }
-    }
+    abstract double calculateSalary();
+
 }

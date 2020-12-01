@@ -24,7 +24,7 @@ public class AdminWorker extends Employee
      *  same grade/salary values as managers, use utilites method aswell
      * @return double
      */
-    public double calculateSalary(){super(calculateSalary())}
+    public double calculateSalary(){return "";}
 
     public int getGrade() {
         return grade;

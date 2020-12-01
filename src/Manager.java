@@ -18,6 +18,8 @@ public class Manager extends Employee
     {
         super(Employee);
 
+        this.grade = grade;
+
         employees = new ArrayList<>();
     }
 
@@ -41,7 +43,10 @@ public class Manager extends Employee
     public void setEmployees(ArrayList<Employee> employees){this.employees = employees;}
 
     //TODO
-    public double calculateSalary(){super(calculateSalary())}
+    public double calculateSalary()
+    {
+        return super.calculateSalary() + "\t" + deptName + "\n" + "\t" + grade + "\n";
+    }
 
     //TODO
     public void addDeptEmployee(Employee employee) {return;}
