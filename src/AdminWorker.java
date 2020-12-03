@@ -4,11 +4,27 @@
 public class AdminWorker extends Employee
 {
     private int grade;
+    private float FIXED_BONUS = 200;
 
     //TODO
     public AdminWorker(String fName, String sName, String ppsNum, int grade)
     {
         super(Employee);
+    }
+
+    public int getGrade() {
+        return grade;
+    }
+    public float getFIXED_BONUS() {
+        return FIXED_BONUS;
+    }
+
+    //TODO
+    public void setGrade(int grade) {
+        this.grade = grade;
+    }
+    public void setFIXED_BONUS(float FIXED_BONUS) {
+        this.FIXED_BONUS = FIXED_BONUS;
     }
 
     /** method takes the salary calculated by adding
@@ -24,16 +40,20 @@ public class AdminWorker extends Employee
      *  same grade/salary values as managers, use utilites method aswell
      * @return double
      */
-    public double calculateSalary(){return "";}
-
-    public int getGrade() {
-        return grade;
+    public double calculateSalary()
+    {
+        int i = 2; i <= 7; i++;
+        getFIXED_BONUS() + (getGrade() * 700)
+        return "";
     }
 
+    /**
+     * @return true if current object have the same values in all fields of both objects
+     *          false otherwise
+     * use the equals from Employee superclass
+     */
     //TODO
-    public void setGrade(int grade) {
-        this.grade = grade;
-    }
+    public boolean equals(AdminWorker){return;}
 
     //TODO
     @Override

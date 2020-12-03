@@ -58,14 +58,14 @@ public class Utilities {
     //static boolean validIndex(int num, ArrayList values){return (num >= 0 && num < values.size());}
 
     //TODO
-    public static float getSalaryForLecturerLevel(int lecturer)
+    static float getSalaryForLecturerLevel(int lecturer)
     {
-        return
+        return lecturer;
     }
 
     //TODO
-    public static float getSalaryForAdminGrade(int admin)
+    static float getSalaryForAdminGrade(int admin)
     {
-        return
+        return admin;
     }
 }
