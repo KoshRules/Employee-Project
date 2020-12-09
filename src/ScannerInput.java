@@ -33,7 +33,8 @@ public class ScannerInput {
             var scanner = new Scanner(System.in);
             try {
                 System.out.print(prompt);
-                return String.parseString(scanner.nextLine());
+                return "";
+                //return String.parseString(scanner.nextLine());
             }
             catch (Exception e) {
                 System.err.println("\tEnter a string please.");
@@ -41,12 +42,12 @@ public class ScannerInput {
         }  while (true);
     }
 
-    public static Char readNextChar(String prompt) {
+    public static char readNextChar(String prompt) {
         do {
             var scanner = new Scanner(System.in);
             try {
                 System.out.print(prompt);
-                return scanner.nextLine();
+                return 'a';//return scanner.nextLine();
             }
             catch (Exception e) {
                 System.err.println("\tEnter a string please.");

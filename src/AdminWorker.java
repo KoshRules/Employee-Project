@@ -3,13 +3,16 @@
  */
 public class AdminWorker extends Employee
 {
-    private int grade;
+    private int grade = 1;
     private float FIXED_BONUS = 200;
 
     //TODO
     public AdminWorker(String fName, String sName, String ppsNum, int grade)
     {
-        super(Employee);
+        super(fName, sName, ppsNum);
+
+        this.grade = grade;
+
     }
 
     public int getGrade() {
@@ -42,9 +45,7 @@ public class AdminWorker extends Employee
      */
     public double calculateSalary()
     {
-        int i = 2; i <= 7; i++;
-        getFIXED_BONUS() + (getGrade() * 700)
-        return "";
+        return Utilities.getSalaryForAdminGrade(getGrade()) + getFIXED_BONUS();
     }
 
     /**
@@ -52,10 +53,10 @@ public class AdminWorker extends Employee
      *          false otherwise
      * use the equals from Employee superclass
      */
-    //TODO
-    public boolean equals(AdminWorker){return;}
+    public boolean equals(AdminWorker adminWorker) {
+        return super.equals(adminWorker);
+    }
 
-    //TODO
     @Override
     public String toString() {
         return "AdminWorker{" +

@@ -3,7 +3,7 @@
  */
 public class Lecturer extends Employee
 {
-    private int level;
+    private int level = 1;
 
     /**
      * @param fName
@@ -13,8 +13,16 @@ public class Lecturer extends Employee
      */
     public Lecturer(String fName, String sName, String ppsNum, int level)
     {
-        super(Employee);
+        super(fName, sName, ppsNum);
+        this.level = level;
+    }
 
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
     }
 
     /** takes the salary associated with his/her salary level as per:
@@ -24,13 +32,9 @@ public class Lecturer extends Employee
      * @return double
      * utilities method to calculate
      */
-    public double calculateSalary(double salary){return Utilities.getSalaryForLecturerLevel(salary);}
+    public double calculateSalary(){return Utilities.getSalaryForLecturerLevel(getLevel());}
 
-    public int getLevel() {
-        return level;
-    }
+    public boolean equals(Lecturer lecturer){return super.equals(lecturer);}
 
-    public void setLevel(int level) {
-        this.level = level;
-    }
+
 }

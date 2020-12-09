@@ -10,7 +10,8 @@ public class Driver
 
     public Driver()
     {
-        = new ArrayList<>();
+        // TODO Check this one - probably dodgy
+        ArrayList list = new ArrayList<>();
         runMenu();
     }
 
