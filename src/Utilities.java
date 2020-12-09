@@ -60,6 +60,8 @@ public class Utilities {
     //TODO
     static float getSalaryForLecturerLevel(int lecturer)
     {
+        int lecturer = ??();
+        while (lecturer != 0)
         return lecturer;
     }
 

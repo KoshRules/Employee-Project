@@ -54,6 +54,9 @@ public abstract class Employee
         this.ppsNumber = ppsNumber;
     }
 
+    //TODO
+    public boolean equals(Employee employee){}
+
     @Override
     public String toString() {
         return "Employee{" +
