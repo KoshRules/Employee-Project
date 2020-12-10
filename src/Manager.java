@@ -12,7 +12,6 @@ public class Manager extends Employee
      * deptEmployees - a collection of Employees in this manager's department. Employees should alrdy be in the employees list
      * @param grade - is an integer between 1 adn 4. managers basic salary depends on this. (default is 1)
      */
-    //TODO
     public Manager(String fName, String sName, String ppsNum, int grade)
     {
         super(fName, sName, ppsNum);
@@ -27,7 +26,6 @@ public class Manager extends Employee
     }
     public ArrayList<Employee> getEmployees(){return deptEmployees;}
 
-    //TODO
     public void setGrade(int grade) {
         this.grade = grade;
     }
@@ -37,7 +35,6 @@ public class Manager extends Employee
      * bonus is calculated by adding 1% of each of employees' full salaries
      * @return
      */
-    //TODO
     public double calculateSalary()
     {
         double onePercentfromEmployees = 0;
@@ -77,12 +74,10 @@ public class Manager extends Employee
     public boolean equals(Manager manager){return super.equals(manager);}
 
 
-    //TODO
     public int numberInDept(){
         return getEmployees().size();
     }
 
-    //TODO
     @Override
     public String toString() {
         return "Manager{" +

@@ -6,10 +6,10 @@ public class Lecturer extends Employee
     private int level = 1;
 
     /**
-     * @param fName
-     * @param sName
-     * @param ppsNum
-     * @param level
+     * @param fName same as before
+     * @param sName same as before
+     * @param ppsNum same as before
+     * @param level this is the lecturer's salary level. it should be between 1 and 3(inclusive).
      */
     public Lecturer(String fName, String sName, String ppsNum, int level)
     {
@@ -34,6 +34,12 @@ public class Lecturer extends Employee
      */
     public double calculateSalary(){return Utilities.getSalaryForLecturerLevel(getLevel());}
 
+    /**
+     * @param lecturer
+     * @return true if the current object have the same values in the four fields of both objects
+     *          false otherwise
+     * (hint) use equals from Employee superclass
+     */
     public boolean equals(Lecturer lecturer){return super.equals(lecturer);}
 
 

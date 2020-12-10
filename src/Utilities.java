@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Utilities {
     static boolean onlyContainsNumbers(String text) {
-        return (text.matches("[0-9]+"));
+        return (text.matches("[0-9]+[A-Za-z]"));
     }
 
     static boolean onlyContainsCharacters(String text) {
@@ -46,6 +46,23 @@ public class Utilities {
 
     }
 
+    static float getSalaryForLecturerLevel(int lecturerLevel)
+    {
+        int Blvl = 1000;
+        return lecturerLevel * Blvl;
+    }
+
+    static float getSalaryForAdminGrade(int adminGrade)
+    {
+        int Bgrade = 700;
+        return adminGrade * Bgrade;
+    }
+
+    static double GetOnePercentOfSalary(double salary)
+    {
+        return (salary / 100) * 1;
+    }
+
     //TODO
     static boolean validLecturerLevel(int lecturer) {
         return false;
@@ -74,22 +91,5 @@ public class Utilities {
     static boolean validIndex(int index, ArrayList list){
 
         return false;
-    }
-
-    static float getSalaryForLecturerLevel(int lecturerLevel)
-    {
-        int Blvl = 1000;
-        return lecturerLevel * Blvl;
-    }
-
-    static float getSalaryForAdminGrade(int adminGrade)
-    {
-        int Bgrade = 700;
-        return adminGrade * Bgrade;
-    }
-
-    static double GetOnePercentOfSalary(double salary)
-    {
-        return (salary / 100) * 1;
     }
 }

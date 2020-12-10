@@ -28,30 +28,15 @@ public class ScannerInput {
         }  while (true);
     }
 
-    public static String readNextLine(String prompt) {
-        do {
-            var scanner = new Scanner(System.in);
-            try {
-                System.out.print(prompt);
-                return "";
-                //return String.parseString(scanner.nextLine());
-            }
-            catch (Exception e) {
-                System.err.println("\tEnter a string please.");
-            }
-        }  while (true);
+    public static String validNextLine(String prompt) {
+        Scanner input = new Scanner(System.in);
+        System.out.println(prompt);
+        return input.nextLine();
     }
 
-    public static char readNextChar(String prompt) {
-        do {
-            var scanner = new Scanner(System.in);
-            try {
-                System.out.print(prompt);
-                return 'a';//return scanner.nextLine();
-            }
-            catch (Exception e) {
-                System.err.println("\tEnter a string please.");
-            }
-        }  while (true);
+    public static char validNextChar(String prompt) {
+        Scanner input = new Scanner(System.in);
+        System.out.println(prompt);
+        return input.next().charAt(0);
     }
 }

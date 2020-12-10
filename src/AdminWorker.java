@@ -6,7 +6,6 @@ public class AdminWorker extends Employee
     private int grade = 1;
     private float FIXED_BONUS = 200;
 
-    //TODO
     public AdminWorker(String fName, String sName, String ppsNum, int grade)
     {
         super(fName, sName, ppsNum);
@@ -22,7 +21,6 @@ public class AdminWorker extends Employee
         return FIXED_BONUS;
     }
 
-    //TODO
     public void setGrade(int grade) {
         this.grade = grade;
     }
