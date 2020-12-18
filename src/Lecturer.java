@@ -14,7 +14,11 @@ public class Lecturer extends Employee
     public Lecturer(String fName, String sName, String ppsNum, int level)
     {
         super(fName, sName, ppsNum);
+
+        if (Utilities.validLecturerLevel(level))
         this.level = level;
+        else
+            this.level = 1;
     }
 
     public int getLevel() {
@@ -22,7 +26,7 @@ public class Lecturer extends Employee
     }
 
     public void setLevel(int level) {
-        this.level = level;
+        if (Utilities.validLecturerLevel(level)) this.level = level;
     }
 
     /** takes the salary associated with his/her salary level as per:
@@ -40,7 +44,12 @@ public class Lecturer extends Employee
      *          false otherwise
      * (hint) use equals from Employee superclass
      */
-    public boolean equals(Lecturer lecturer){return super.equals(lecturer);}
+    public boolean equals(Lecturer lecturer){return (this.level == lecturer.level && super.equals(lecturer));}
 
-
+    @Override
+    public String toString()
+    {
+        return "Lecturer{" + super.toString() +
+                "level=" + level + '}';
+    }
 }

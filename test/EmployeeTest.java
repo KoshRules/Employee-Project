@@ -1,9 +1,7 @@
-import static org.junit.Assert.*;
-
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 /**
  * Test Class for the Employee class
@@ -62,7 +60,6 @@ public class EmployeeTest {
         empNormal1.setFirstName(("1234567890123"));
         assertEquals("John", empNormal1.getFirstName());
 
-
         assertEquals("1234567xx", empNormal1.getPpsNumber());
         empNormal1.setPpsNumber("2222222aa");
         assertEquals("2222222aa", empNormal1.getPpsNumber());
@@ -74,6 +71,8 @@ public class EmployeeTest {
         assertEquals("Mouse", empNormal1.getSecondName());
         empNormal1.setSecondName("Mickey Mouse");
         assertEquals("Mouse", empNormal1.getSecondName());
+
+
     }
 
     @Test

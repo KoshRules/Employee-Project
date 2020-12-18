@@ -16,13 +16,13 @@ public abstract class Employee
     public Employee(String fName, String sName, String ppsNum)
     {
         if (Utilities.max10Chars(fName)) this.firstName = fName;
-        else this.firstName = "invalid format";
+        else this.firstName = "1234567890";
 
         if (Utilities.max10Chars(sName)) this.secondName = sName;
-        else this.secondName = "invalid format";
+        else this.secondName = "1234567890";
 
         if (Utilities.validPPS(ppsNum)) this.ppsNumber = ppsNum;
-        else  this.ppsNumber = "invalid format";
+        else  this.ppsNumber = "0000000XX";
     }
 
     /**
@@ -42,14 +42,14 @@ public abstract class Employee
     }
 
     public void setSecondName(String sName) {
-        if (Utilities.max10Chars(sName)) this.secondName = secondName;
+        if (Utilities.max10Chars(sName)) this.secondName = sName;
     }
 
     public String getPpsNumber() {
         return ppsNumber;
     }
 
-    public void setPpsNumber(String ppsNum) {if (Utilities.validPPS(ppsNum)) this.ppsNumber = ppsNumber; }
+    public void setPpsNumber(String ppsNum) {if (Utilities.validPPS(ppsNum)) this.ppsNumber = ppsNum; }
 
     public boolean equals(Employee employee){
         return (this.firstName.equals(employee.getFirstName()) &&

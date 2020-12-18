@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class Manager extends Employee
 {
     private int grade;
-    private ArrayList<Employee> deptEmployees;
+    private ArrayList<Employee> dept;
 
     /**
      * deptEmployees - a collection of Employees in this manager's department. Employees should alrdy be in the employees list
@@ -16,20 +16,23 @@ public class Manager extends Employee
     {
         super(fName, sName, ppsNum);
 
+        if (Utilities.validManagerLevel(grade))
         this.grade = grade;
+        else
+            this.grade = 1;
 
-        deptEmployees = new ArrayList<>();
+        dept = new ArrayList<>();
     }
 
     public int getGrade() {
         return grade;
     }
-    public ArrayList<Employee> getEmployees(){return deptEmployees;}
+    public ArrayList<Employee> getDept(){return dept;}
 
     public void setGrade(int grade) {
-        this.grade = grade;
+        if (Utilities.validManagerLevel(grade)) this.grade = grade;
     }
-    public void setEmployees(ArrayList<Employee> employees){this.deptEmployees = employees;}
+    public void setDept(ArrayList<Employee> employees){this.dept = employees;}
 
     /** managers salary is caluclated by adding the follwing two valuse: grade & bonus
      * bonus is calculated by adding 1% of each of employees' full salaries
@@ -38,7 +41,7 @@ public class Manager extends Employee
     public double calculateSalary()
     {
         double onePercentfromEmployees = 0;
-        for (Employee emp: getEmployees() ) {
+        for (Employee emp: getDept() ) {
             onePercentfromEmployees += Utilities.GetOnePercentOfSalary(emp.calculateSalary());
         }
         return Utilities.getSalaryForAdminGrade(this.getGrade()) + onePercentfromEmployees;
@@ -50,7 +53,7 @@ public class Manager extends Employee
      * nothing is returned
      */
     public void addDeptEmployee(Employee employee) {
-        getEmployees().add(employee);
+        getDept().add(employee);
     }
 
 
@@ -60,8 +63,8 @@ public class Manager extends Employee
      * otherwise false
      */
      public boolean removeEmployee(int num){
-        if (getEmployees().size()<num) return false;
-        getEmployees().remove(num);
+        if (getDept().size()<num) return false;
+        getDept().remove(num);
         return true;
     }
 
@@ -71,18 +74,18 @@ public class Manager extends Employee
      *          this will include the employees in the Managers dept (use the .equals from ArrayList here)
      *          false otherwise
      */
-    public boolean equals(Manager manager){return super.equals(manager);}
+    public boolean equals(Manager manager){return (this.grade == manager.grade && super.equals(manager));}
 
 
     public int numberInDept(){
-        return getEmployees().size();
+        return getDept().size();
     }
 
     @Override
     public String toString() {
-        return "Manager{" +
-                "deptName='" + deptEmployees + '\'' +
-                ", grade=" + grade +
+        return "Manager{" + super.toString() +
+                "grade=" + grade +
+                ", dept=" + dept +
                 '}';
     }
 }

@@ -57,12 +57,24 @@ public class UtilitiesTest {
         assertFalse(Utilities.validPPS(("12345671b")));
         assertFalse(Utilities.validPPS(("1234567a1")));
     }
+    @Test
     public void getSalaryForLecturerLevel() {
         assertEquals(1000, Utilities.getSalaryForLecturerLevel(1), .01);
         assertEquals(2000, Utilities.getSalaryForLecturerLevel(2), .01);
         assertEquals(3000, Utilities.getSalaryForLecturerLevel(3), .01);
         assertEquals(-1, Utilities.getSalaryForLecturerLevel(0), .01);
         assertEquals(-1, Utilities.getSalaryForLecturerLevel(4), .01);
+    }
 
+    @Test
+    public void getSalaryForAdminGrade()
+    {
+        assertEquals(700, Utilities.getSalaryForAdminGrade(1), .01);
+        assertEquals(1400, Utilities.getSalaryForAdminGrade(2), .01);
+        assertEquals(2100, Utilities.getSalaryForAdminGrade(3), .01);
+        assertEquals(2800, Utilities.getSalaryForAdminGrade(4), .01);
+        assertEquals(3500, Utilities.getSalaryForAdminGrade(5), .01);
+        assertEquals(4200, Utilities.getSalaryForAdminGrade(6), .01);
+        assertEquals(4900, Utilities.getSalaryForAdminGrade(7), .01);
     }
 }

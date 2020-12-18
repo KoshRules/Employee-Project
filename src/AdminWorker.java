@@ -4,13 +4,16 @@
 public class AdminWorker extends Employee
 {
     private int grade = 1;
-    private float FIXED_BONUS = 200;
+    private static final int FIXED_BONUS = 200;
 
     public AdminWorker(String fName, String sName, String ppsNum, int grade)
     {
         super(fName, sName, ppsNum);
 
-        this.grade = grade;
+        if (Utilities.validManagerLevel(grade))
+            this.grade = grade;
+        else
+            this.grade = 1;
 
     }
 
@@ -22,11 +25,9 @@ public class AdminWorker extends Employee
     }
 
     public void setGrade(int grade) {
-        this.grade = grade;
+        if (Utilities.validAdminLevel(grade))this.grade = grade;
     }
-    public void setFIXED_BONUS(float FIXED_BONUS) {
-        this.FIXED_BONUS = FIXED_BONUS;
-    }
+
 
     /** method takes the salary calculated by adding
      * fixed bonus for all Admin workers (200)
@@ -52,13 +53,12 @@ public class AdminWorker extends Employee
      * use the equals from Employee superclass
      */
     public boolean equals(AdminWorker adminWorker) {
-        return super.equals(adminWorker);
+        return (this.grade == adminWorker.grade && super.equals(adminWorker));
     }
 
     @Override
     public String toString() {
-        return "AdminWorker{" +
-                "grade=" + grade +
-                '}';
+        return "AdminWorker{" + super.toString() +
+                "grade=" + grade + '}';
     }
 }
