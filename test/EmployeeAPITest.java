@@ -57,17 +57,20 @@ public class EmployeeAPITest {
         assertEquals("Ryan", empAPI.getEmployees().get(3).getSecondName());
     }
 
+    @Test
+    public void addEmployee() {}
 
-//    @Test
-//    public void searchEmployees() {
-//        assertEquals(0, empAPI.searchEmployees("Davy"));
-//        assertEquals(1, empAPI.searchEmployees("Donovan"));
-//        assertEquals(2, empAPI.searchEmployees("Power"));
-//        assertEquals(3, empAPI.searchEmployees("Ryan"));
-//        assertEquals(4 ,empAPI.searchEmployees("Meagher"));
-//        assertEquals(-1 ,empAPI.searchEmployees("Trump"));
-//    }
+    @Test
+    public void addEmployeeToDepartment(){}
 
+    @Test
+    public void getEmployee(){}
+
+    @Test
+    public void removeEmployee(){}
+
+    @Test
+    public void numberOfEmployees(){}
 
     @Test
     public void listEmployees() {
@@ -84,8 +87,39 @@ public class EmployeeAPITest {
 
         EmployeeAPI emptyList = new EmployeeAPI();
         assertTrue(emptyList.listEmployees().contains("No Employees"));
-
     }
 
+    @Test
+    public void listManagerEmployees(){}
 
+    @Test
+    public void listManagerEmployees(){}
+
+//      @Test
+//    public void searchEmployees() {
+//        assertEquals(0, empAPI.searchEmployees("Davy"));
+//        assertEquals(1, empAPI.searchEmployees("Donovan"));
+//        assertEquals(2, empAPI.searchEmployees("Power"));
+//        assertEquals(3, empAPI.searchEmployees("Ryan"));
+//        assertEquals(4 ,empAPI.searchEmployees("Meagher"));
+//        assertEquals(-1 ,empAPI.searchEmployees("Trump"));
+//    }
+
+    @Test
+    public void totalSalariesOwed(){}
+
+    @Test
+    public void avgSalariesOwed(){}
+
+    @Test
+    public void employeeWithHighestPay(){}
+
+    @Test
+    public void sortEmployeesByFirstName(){}
+
+    @Test
+    public void sortEmployeesBySecondName(){}
+
+    @Test
+    public void swapEmployees(){}
 }

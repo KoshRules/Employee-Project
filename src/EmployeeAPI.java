@@ -1,21 +1,26 @@
-import java.util.ArrayList;
-import java.util.Collection;
+import java.lang.reflect.Array;
+import java.util.*;
 
 public class EmployeeAPI
 {
     private ArrayList<Employee> employees;
     private EmployeeAPI employeeAPI;
 
+    /**
+     * EmployeeAPI constructor
+     */
     public EmployeeAPI()
     {
         employees = new ArrayList<>();
     }
 
 
+    /**
+     * Get & Set
+     */
     public ArrayList<Employee> getEmployees() {
         return employees;
     }
-
     public void setEmployees(ArrayList<Employee> employees) {
         this.employees = employees;
     }
@@ -121,14 +126,22 @@ public class EmployeeAPI
      * sorts the employees object in ascending alphabetical order (firstname) of employees
      */
     //TODO
-    public void sortEmployeesByFirstName(){Collection.sort(employees);}
+    public void sortEmployeesByFirstName()
+    {
+        //sort Employee ArrayList by fName asc alphabetical
+        Collections.sort(employees);
+    }
 
     /**
      * sorts the employees object in ascending alphabetical order (secondname) of employees
      */
     //TODO
-    public void sortEmployeesBySecondName(){
-        Collection.sort(employees);
+    public void sortEmployeesBySecondName()
+    {
+        //sort Employee ArrayList by sName asc alphabetical
+        Employee sName[] = employees.get(listEmployees());
+
+        Collections.sort(employees);
     }
 
     //TODO
