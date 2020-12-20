@@ -35,15 +35,15 @@ public class UtilitiesTest {
 
     }
 
-//    @Test
-//    public void validIntNonNegative() {
-//        assertTrue(Utilities.validIntNonNegative(0));
-//        assertTrue(Utilities.validIntNonNegative(1));
-//        assertTrue(Utilities.validIntNonNegative(1000));
-//        assertFalse(Utilities.validIntNonNegative(-1));
-//
-//
-//    }
+    @Test
+    public void validIntNonNegative() {
+        assertTrue(Utilities.validIntNonNegative(0));
+        assertTrue(Utilities.validIntNonNegative(1));
+        assertTrue(Utilities.validIntNonNegative(1000));
+        assertFalse(Utilities.validIntNonNegative(-1));
+
+
+    }
     @Test
     public void validPPS() {
         assertTrue(Utilities.validPPS(("1234567ab")));    // normal
@@ -92,14 +92,6 @@ public class UtilitiesTest {
         assertFalse(Utilities.validIndex(-1, strings));
         assertTrue(Utilities.validIndex(3, strings));
         assertFalse(Utilities.validIndex(4, strings));
-    }
-
-    @Test
-    public void validNonNegative() {
-        assertTrue(Utilities.validNonNegative(10));
-        assertTrue(Utilities.validNonNegative(0));
-        assertFalse(Utilities.validNonNegative(-1));
-        assertFalse(Utilities.validNonNegative(-10));
     }
 
     @Test
