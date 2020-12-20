@@ -77,15 +77,13 @@ public class Utilities {
 
     }
 
-    //TODO
-    static boolean validDoubleNonNegative(double DnonNeg){
-        return false;
-
+    static boolean validDoubleNonNegative(double DnonNeg)
+    {
+        return (DnonNeg >= 0);
     }
 
-    //TODO
-    static boolean validIndex(int index, ArrayList list){
+    static boolean validIndex(int num, ArrayList values){
 
-        return false;
+        return (num >= 0 && num < values.size());
     }
 }

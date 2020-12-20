@@ -2,6 +2,8 @@
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -77,4 +79,35 @@ public class UtilitiesTest {
         assertEquals(4200, Utilities.getSalaryForAdminGrade(6), .01);
         assertEquals(4900, Utilities.getSalaryForAdminGrade(7), .01);
     }
+
+    @Test
+    public void validIndex() {
+        ArrayList<String> strings = new ArrayList<String>();
+        strings.add("One");
+        strings.add("Two");
+        strings.add("Three");
+        strings.add("Four");
+        assertTrue(Utilities.validIndex(2, strings));
+        assertTrue(Utilities.validIndex(0, strings));
+        assertFalse(Utilities.validIndex(-1, strings));
+        assertTrue(Utilities.validIndex(3, strings));
+        assertFalse(Utilities.validIndex(4, strings));
+    }
+
+    @Test
+    public void validNonNegative() {
+        assertTrue(Utilities.validNonNegative(10));
+        assertTrue(Utilities.validNonNegative(0));
+        assertFalse(Utilities.validNonNegative(-1));
+        assertFalse(Utilities.validNonNegative(-10));
+    }
+
+    @Test
+    public void validManagerLevel(){}
+
+    @Test
+    public void validLecturerLevel(){}
+
+    @Test
+    public void validAdminLevel(){}
 }

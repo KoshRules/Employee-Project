@@ -25,11 +25,11 @@ public class EmployeeAPI
         this.employees = employees;
     }
 
-    //TODO
     public void addEmployee(Employee employee)
     {
         //get the employee information;
         //add it to employee arraylist;
+        employees.add(employee);
     }
 
     //TODO
